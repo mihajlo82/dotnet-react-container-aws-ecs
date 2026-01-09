@@ -1,53 +1,26 @@
-# =========================
-# .NET / ASP.NET Core
-# =========================
-**/bin/
-**/obj/
+# ===== Global =====
+.env
+.env.*
+*.log
+
+# ===== Visual Studio =====
+.vs/
 *.user
 *.suo
-*.userosscache
-*.sln.docstates
-*.vs/
 
-# =========================
-# Node / Next.js
-# =========================
-**/node_modules/
-**/.next/
-npm-debug.log*
-yarn-error.log*
-yarn-debug.log*
+# ===== .NET =====
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
 
-# =========================
-# IDE / Editor
-# =========================
-.vscode/
-.idea/
-*.swp
-*.DS_Store
+# ===== Node / Frontend =====
+node_modules/
+.next/
+dist/
+build/
+
+# ===== OS =====
+.DS_Store
 Thumbs.db
-
-# =========================
-# Logs / Temporary files
-# =========================
-*.log
-*.tmp
-*.env
-*.env.*    # Any environment files (production should be injected via ECS)
-
-# =========================
-# GitHub Actions
-# =========================
-# .github/workflows/*
-
-# =========================
-# Test / coverage
-# =========================
-**/TestResults/
-**/coverage/
-
-# =========================
-# Docker
-# =========================
-# **/Dockerfile*
-# **/docker-compose*
