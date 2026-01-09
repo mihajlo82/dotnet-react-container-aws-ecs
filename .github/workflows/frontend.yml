@@ -32,9 +32,20 @@ jobs:
         docker push \
           ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/users-ui:latest
 
+    - name: Debug AWS identity
+      run: aws sts get-caller-identity
+
+    - name: Debug ECS clusters
+      run: aws ecs list-clusters
+
+    - name: Debug ECS services
+      run: aws ecs list-services --cluster users-devops-cluster
+
+
+
     - name: Deploy ECS service
       run: |
         aws ecs update-service \
-          --cluster users-cluster \
-          --service users-ui-service \
+          --cluster users-devops-cluster \
+          --service users-ui-task-service \
           --force-new-deployment
