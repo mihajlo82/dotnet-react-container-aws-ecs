@@ -39,7 +39,7 @@ jobs:
       run: aws ecs list-clusters
 
     - name: Debug ECS services
-      run: aws ecs list-services --cluster users-cluster
+      run: aws ecs list-services --cluster users-devops-cluster
 
 
     - name: Deploy ECS service

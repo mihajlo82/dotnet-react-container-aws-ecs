@@ -43,17 +43,17 @@ namespace dotnnet_api.Controllers
                 return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
             }
 
-            // [HttpPut("{id}")]
-            // public async Task<IActionResult> UpdateUser(int id, User updatedUser)
-            // {
-            //     if (id != updatedUser.Id)
-            //         return BadRequest();
+            [HttpPut("{id}")]
+            public async Task<IActionResult> UpdateUser(int id, User updatedUser)
+            {
+                if (id != updatedUser.Id)
+                    return BadRequest();
 
-            //     _context.Entry(updatedUser).State = EntityState.Modified;
-            //     await _context.SaveChangesAsync();
+                _context.Entry(updatedUser).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
 
-            //     return NoContent();
-            // }
+                return NoContent();
+            }
 
             [HttpDelete("{id}")]
             public async Task<IActionResult> DeleteUser(int id)
