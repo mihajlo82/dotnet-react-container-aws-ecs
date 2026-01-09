@@ -24,7 +24,7 @@ jobs:
     - name: Login to Amazon ECR
       uses: aws-actions/amazon-ecr-login@v2
 
-    - name: Build and push client devops image
+    - name: Build and push client-devops image
       run: |
         docker build -t users-ui client-devops
         docker tag users-ui:latest \

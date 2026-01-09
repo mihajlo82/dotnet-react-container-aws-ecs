@@ -24,7 +24,7 @@ jobs:
     - name: Login to Amazon ECR
       uses: aws-actions/amazon-ecr-login@v2
 
-    - name: Build and push backend image
+    - name: Build and push dotnnet-api image
       run: |
         docker build -t users-api dotnnet-api
         docker tag users-api:latest \
