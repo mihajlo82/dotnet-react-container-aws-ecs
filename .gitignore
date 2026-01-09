@@ -49,5 +49,5 @@ Thumbs.db
 # =========================
 # Docker
 # =========================
-**/Dockerfile*
-**/docker-compose*
+# **/Dockerfile*
+# **/docker-compose*

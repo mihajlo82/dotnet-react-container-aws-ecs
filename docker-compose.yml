@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: dopuser
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./dotnnet-api/dotnnet-api
+    container_name: users-api
+    environment:
+      ASPNETCORE_URLS: http://+:7058   # ←ASPNETCORE_URLS: http://+:7058   # ←
+      DB_CONNECTION: Host=postgres;Port=5432;Database=dopuser;Username=postgres;Password=root
+    ports:
+      - "7058:7058"
+    depends_on:
+      - postgres
+
+  frontend:
+    build: ./client-devops
+    container_name: users-ui
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
