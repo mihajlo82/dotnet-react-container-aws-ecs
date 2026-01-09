@@ -38,7 +38,7 @@ Thumbs.db
 # =========================
 # GitHub Actions
 # =========================
-.github/workflows/*
+# .github/workflows/*
 
 # =========================
 # Test / coverage
