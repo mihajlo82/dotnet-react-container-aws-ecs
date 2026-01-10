@@ -71,8 +71,6 @@ The project demonstrates **end-to-end DevOps and cloud architecture**, from VPC 
         └────────────────────────┘
 
 
----
-
 ## 🔀 Load Balancer Routing
 ```text
 **Application Load Balancer (ALB)** with path-based routing:
