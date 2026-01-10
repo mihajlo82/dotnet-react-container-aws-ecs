@@ -44,18 +44,31 @@ The project demonstrates **end-to-end DevOps and cloud architecture**, from VPC 
 
 ### High-Level Architecture Flow
 
-Internet
-|
-v
-Application Load Balancer (Public Subnets)
-|
-|-- / → React Frontend (ECS)
-|-- /api/* → .NET API (ECS)
-|
-ECS Fargate (Private Subnets)
-|
-v
-PostgreSQL (RDS, Private Subnets)
+┌──────────┐
+│ Internet │
+└────┬─────┘
+     │
+     ▼
+┌──────────────────────────────┐
+│ Application Load Balancer    │
+│ (Public Subnets)             │
+└────┬───────────────┬─────────┘
+     │               │
+     │ /             │ /api/*
+     ▼               ▼
+┌───────────────┐   ┌────────────────┐
+│ React Frontend│   │ .NET API        │
+│ (ECS Fargate) │   │ (ECS Fargate)   │
+│ Private Subnet│   │ Private Subnet  │
+└───────┬───────┘   └────────┬───────┘
+        │                    │
+        └──────────┬─────────┘
+                   ▼
+        ┌────────────────────────┐
+        │ PostgreSQL (Amazon RDS) │
+        │ Private Subnets         │
+        └────────────────────────┘
+
 
 
 
