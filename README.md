@@ -42,8 +42,9 @@ The project demonstrates **end-to-end DevOps and cloud architecture**, from VPC 
 
 ---
 
-### High-Level Architecture Flow
+## 🏗️ High-Level Architecture Flow
 
+```text
 ┌──────────┐
 │ Internet │
 └────┬─────┘
@@ -68,8 +69,6 @@ The project demonstrates **end-to-end DevOps and cloud architecture**, from VPC 
         │ PostgreSQL (Amazon RDS) │
         │ Private Subnets         │
         └────────────────────────┘
-
-
 
 
 ---
