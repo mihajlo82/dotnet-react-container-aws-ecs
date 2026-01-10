@@ -74,7 +74,7 @@ The project demonstrates **end-to-end DevOps and cloud architecture**, from VPC 
 ---
 
 ## 🔀 Load Balancer Routing
-
+```text
 **Application Load Balancer (ALB)** with path-based routing:
 
 | Path       | Target Group       | Service        |
@@ -83,7 +83,7 @@ The project demonstrates **end-to-end DevOps and cloud architecture**, from VPC 
 | `/api/*`  | `users-api-tg`    | .NET Backend   |
 
 ---
-
+```text
 ## 🔐 Security
 
 ### Security Groups
