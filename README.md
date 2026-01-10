@@ -147,19 +147,6 @@ No services are publicly exposed except the ALB.
 
 ---
 
-## ⚙️ Environment Variables
-
-### Backend (.NET)
-
-ASPNETCORE_URLS=http://+:7058
-ConnectionStrings__DefaultConnection=postgresql://<user>:<password>@<host>:5432/<db>
-
-### Frontend (React 19)
-NEXT_PUBLIC_API_URL=http://<ALB-DNS>/api
-
-
-# Project Overview
-
 ## 🔄 CI/CD Pipeline (GitHub Actions)
 
 ### Workflow
@@ -178,13 +165,13 @@ NEXT_PUBLIC_API_URL=http://<ALB-DNS>/api
 - AWS ECS
 - AWS ECR
 - AWS FARGATE
-- AWS NETWORKING
+- AWS NETWORKING (VPC, NAT, IGW, Route Tables, Elastic IP & SUBNETS)
 - .Net Core (8.0)
 - Next/React
 - Amazon RDS
 - AWS ELB
 - AWS IAM
-- 
+
 ---
 
 ## 🧪 Database Migrations
