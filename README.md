@@ -165,7 +165,7 @@ No services are publicly exposed except the ALB.
 - AWS ECS
 - AWS ECR
 - AWS FARGATE
-- AWS NETWORKING (VPC, NAT, IGW, Route Tables, Elastic IP & SUBNETS)
+- AWS NETWORKING (VPC, NAT, IGW, Route Tables, Elastic IP & Subnets)
 - .Net Core (8.0)
 - Next/React
 - Amazon RDS
