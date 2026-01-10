@@ -70,3 +70,18 @@ The project demonstrates **end-to-end DevOps and cloud architecture**, from VPC 
         │ Private Subnets         │
         └────────────────────────┘
 
+```
+
+##  🔀 Load Balancer Routing
+```text
+**Application Load Balancer (ALB)** with path-based routing:
+
+| Path       | Target Group       | Service        |
+|-----------|------------------|----------------|
+| `/`       | `users-ui-tg`     | React Frontend |
+| `/api/*`  | `users-api-tg`    | .NET Backend   |
+
+
+```
+
+---
